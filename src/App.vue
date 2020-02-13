@@ -43,8 +43,8 @@ export default {
             enableHtml: false,
             fullStyle: [
                 `/*
-* Hi。宝贝！
-* 这么久了。还没和宝贝说过我的工作呢！
+* Hi。雅茹！
+* 这么久了。还没和你详细说过我的工作呢！
 * 我是个前端工程师。俗称程序员。网页相关。
 * 如这个页面。就是个什么也没有的网页。
 * 我的工作就是给这种空白的页面加点儿东西。
@@ -93,7 +93,7 @@ html{
   ${ isPc ? '' : '-webkit-transform-origin: 50% 0% 0;transform-origin: 50% 0% 0;' }
 }
 
-/* 再来一张信纸 */
+/* 再来一张可爱的信纸 */
 .resumeEditor{
   position: fixed; 
   ${ isPc ? 'right: 0;' : 'left:0;right:0;margin:auto;'}
