@@ -7,8 +7,10 @@ html,body,#app{
   height:100%;
 }
 .resumeEditor {
-    background: url("~assets/timg.jpg") #fff no-repeat center bottom / auto auto;
+    background: url("~assets/5b63b3b091557.jpg") #fff no-repeat;
+    background-size: cover;
 }
+
 /**
  * webkit-scroll
  * 2016-04-01 11:29:56
