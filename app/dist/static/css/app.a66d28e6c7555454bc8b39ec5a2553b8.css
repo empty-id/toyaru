@@ -44,8 +44,7 @@ html,body,#app{
   height:100%;
 }
 .resumeEditor {
-    background: url(../../static/img/5b63b3b091557.324f771.jpg) no-repeat;
-    background: 100% 100%;
+    background: url(../../static/img/timg.1a8a778.jpg) #fff no-repeat center bottom / auto auto;
 }
 /**
  * webkit-scroll
