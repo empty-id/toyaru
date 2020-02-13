@@ -4,7 +4,7 @@
       autoplay="autoplay"
       loop="loop"
       preload="auto"
-      src="../static/music_yyqx.mp3"
+      src="./assets/music_yyqx.mp3"
     >你的浏览器版本太低，不支持audio标签</audio>
     <!-- <embed
       hidden="true"
