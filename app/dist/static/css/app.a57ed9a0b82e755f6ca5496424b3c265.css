@@ -1,21 +1,21 @@
 
-#app[data-v-fdbd55ca] {
+#app[data-v-bd26cd6c] {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-html[data-v-fdbd55ca] {
+html[data-v-bd26cd6c] {
   min-height: 100%;
 }
-.styleEditor[data-v-fdbd55ca] {
+.styleEditor[data-v-bd26cd6c] {
   -webkit-backface-visibility: hidden;
 }
 
-.code[data-v-1b8d968a] {
+.code[data-v-23b5cc2c] {
   display: none;
 }
 
-.htmlMode[data-v-3722ab8d] {
+.htmlMode[data-v-3539023c] {
   -webkit-animation: flip 2s;
           animation: flip 2s;
 }
@@ -44,10 +44,9 @@ html,body,#app{
   height:100%;
 }
 .resumeEditor {
-    background: url(../../static/img/5b63b3b091557.324f771.jpg) #fff no-repeat;
-    background-size: cover;
+    background: url(../../static/img/5b63b3b091557.324f771.jpg) no-repeat;
+    background: 100% 100%;
 }
-
 /**
  * webkit-scroll
  * 2016-04-01 11:29:56

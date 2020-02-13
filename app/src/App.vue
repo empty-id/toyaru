@@ -4,15 +4,9 @@
       autoplay="autoplay"
       loop="loop"
       preload="auto"
-      src="//imgs.shuxitech.com/audio/music_yyqx.mp3"
+      src="../static/music_yyqx.mp3"
     >你的浏览器版本太低，不支持audio标签</audio>
-    <!-- <embed
-      hidden="true"
-      type="video/x-ms-wmv"
-      autostart="1"
-      loop="true"
-      src="http://imgs.shuxitech.com/audio/music_yyqx.mp3"
-    /> -->
+    <!-- http://imgs.shuxitech.com/audio/music_yyqx.mp3 -->
     <StyleEditor ref="styleEditor" :code="currentStyle"></StyleEditor>
     <ResumeEditor ref="resumeEditor" :markdown="currentMarkdown" :enableHtml="enableHtml"></ResumeEditor>
   </div>
