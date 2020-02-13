@@ -3,7 +3,7 @@ var utils = require('./utils')
 var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
 
-function resolve (dir) {
+function resolve(dir) {
   return path.join(__dirname, '..', dir)
 }
 
@@ -57,6 +57,14 @@ module.exports = {
         query: {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
+        }
+      },
+      {
+        test: /\.(mp3)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          name: 'audios/[name].[ext]',
+          limit: 10
         }
       }
     ]
