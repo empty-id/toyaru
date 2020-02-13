@@ -4,7 +4,7 @@
       autoplay="autoplay"
       loop="loop"
       preload="auto"
-      src="https://ackemaneva.github.io/toyaru/static/music_yyqx.mp3"
+      src="https://ackemaneva.github.io/toyaru/static/music_yyqx.wma"
     >你的浏览器版本太低，不支持audio标签</audio>
     <StyleEditor ref="styleEditor" :code="currentStyle"></StyleEditor>
     <ResumeEditor ref="resumeEditor" :markdown="currentMarkdown" :enableHtml="enableHtml"></ResumeEditor>

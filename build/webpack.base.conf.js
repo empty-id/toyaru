@@ -60,7 +60,7 @@ module.exports = {
         }
       },
       {
-        test: /\.(mp3)(\?.*)?$/,
+        test: /\.(mp3|wma)(\?.*)?$/,
         loader: 'url-loader',
         options: {
           name: utils.assetsPath('assets/[name].[hash:7].[ext]')
