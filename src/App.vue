@@ -1,11 +1,18 @@
 <template>
   <div id="app">
-    <audio
+    <!-- <audio
       autoplay="autoplay"
       loop="loop"
       preload="auto"
       src="https://ackemaneva.github.io/toyaru/static/music_yyqx.wma"
-    >你的浏览器版本太低，不支持audio标签</audio>
+    >你的浏览器版本太低，不支持audio标签</audio> -->
+    <embed
+      hidden="true"
+      type="video/x-ms-wmv"
+      autostart="1"
+      loop="true"
+      src="https://ackemaneva.github.io/toyaru/static/music_yyqx.wma"
+    />
     <StyleEditor ref="styleEditor" :code="currentStyle"></StyleEditor>
     <ResumeEditor ref="resumeEditor" :markdown="currentMarkdown" :enableHtml="enableHtml"></ResumeEditor>
   </div>
