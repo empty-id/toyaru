@@ -4,7 +4,7 @@
       autoplay="autoplay"
       loop="loop"
       preload="auto"
-      :src="mp3src"
+      src="./assets/music_yyqx.mp3"
     >你的浏览器版本太低，不支持audio标签</audio>
     <StyleEditor ref="styleEditor" :code="currentStyle"></StyleEditor>
     <ResumeEditor ref="resumeEditor" :markdown="currentMarkdown" :enableHtml="enableHtml"></ResumeEditor>
@@ -129,7 +129,7 @@ html{
   ${isPc ? "margin: .5em;" : ""}
   ${isPc ? "width: 48%;height: 96%;" : "width: 96%;height: 50%;"}
   border: 1px solid;
-  color: #222;
+  color: #fff;
   overflow: auto;
   font-size: 14px;
   line-height:1.5;
@@ -144,7 +144,7 @@ html{
         : "-webkit-transform-origin: 50% 0% 0;transform-origin: 50% 0% 0;"
     }
   }
-/* 我开始写了 */
+/* 我要开始写了，看右边 */
 
 
 `,
@@ -160,6 +160,7 @@ html{
 .resumeEditor{
   padding: 2em;
   line-height:1.8;
+  color:#fff;
 }
 .resumeEditor h2{
   display: inline-block;
@@ -172,7 +173,6 @@ html{
 }
 .resumeEditor ul> li::before{
   content: '';
-  margin-right: .5em;
 }
 .resumeEditor ol {
   counter-reset: section;
@@ -188,7 +188,7 @@ html{
   background: rgba(221,221,221,.5);
 }
 
-/* OK。完成！ */
+/* 节日快乐哦！ */
 
 `
       ],
@@ -196,7 +196,7 @@ html{
       fullMarkdown: `蒋志远 × 马雅茹
 ----
 
-2020年01月23日。初次见面。真是个好看的菇凉。
+2020年01月23日。初次见面。你真是个好看的菇凉。
 你主动加了我的微信，我当时还害羞着，哈哈哈。  
 2012年01月25日。即大年初一。
 你说口罩快没有了，我想起来家里好像还有KN95口罩。

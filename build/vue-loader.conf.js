@@ -11,14 +11,10 @@ module.exports = {
   }),
   postcss: [
     require('autoprefixer')({
-      browsers: ['last 2 versions', 'Android >= 2.5' , 'iOS 6']
+      browsers: ['last 2 versions', 'Android >= 2.5', 'iOS 6']
     })
   ],
   transformToRequire: {
-    video: ['src', 'poster'],
-    source: 'src',
-    img: 'src',
-    image: 'xlink:href',
-    audio: "src" //新增这行
+    "audio": "src"
   }
 }
