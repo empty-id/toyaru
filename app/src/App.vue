@@ -1,11 +1,12 @@
 <template>
   <div id="app">
     <audio
+      ref="audio_"
       autoplay="autoplay"
       loop="loop"
-      preload="auto"
       :src="mediasrc"
     >你的浏览器版本太低，不支持audio标签</audio>
+    <!-- http://imgs.shuxitech.com/audio/music_yyqx.mp3 -->
     <StyleEditor ref="styleEditor" :code="currentStyle"></StyleEditor>
     <ResumeEditor ref="resumeEditor" :markdown="currentMarkdown" :enableHtml="enableHtml"></ResumeEditor>
   </div>
@@ -279,6 +280,7 @@ html{
     };
   },
   created() {
+    this.handleCanplay();
     this.makeResume();
   },
 
@@ -353,6 +355,11 @@ html{
         };
         showResume();
       });
+    },
+    handleCanplay() {
+      this.$nextTick(() => {
+        this.$refs.audio_.play();
+      })
     }
   }
 };
