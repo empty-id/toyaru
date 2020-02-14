@@ -53,8 +53,8 @@ export default {
   },
   computed: {
     mediasrc() {
-      // return require("./assets/music_yyqx.mp3");
-      return "http://imgs.shuxitech.com/audio/music_yyqx.mp3";
+      return require("./assets/music_yyqx.mp3");
+      // return "http://imgs.shuxitech.com/audio/music_yyqx.mp3";
     }
   },
   data() {
