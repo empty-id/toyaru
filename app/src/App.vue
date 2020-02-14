@@ -1,12 +1,12 @@
 <template>
   <div id="app">
-    <audio
+    <!-- <audio
       ref="audio_"
       autoplay="autoplay"
       loop="loop"
       :src="mediasrc"
       controls
-    >你的浏览器版本太低，不支持audio标签</audio>
+    >你的浏览器版本太低，不支持audio标签</audio>-->
     <!-- http://imgs.shuxitech.com/audio/music_yyqx.mp3 -->
     <StyleEditor ref="styleEditor" :code="currentStyle"></StyleEditor>
     <ResumeEditor ref="resumeEditor" :markdown="currentMarkdown" :enableHtml="enableHtml"></ResumeEditor>
@@ -65,6 +65,7 @@ export default {
   },
   data() {
     return {
+      audio: null,
       interval: 54,
       currentStyle: "",
       mp3src: "./assets/music_yyqx.mp3",
@@ -359,9 +360,28 @@ html{
       });
     },
     handleCanplay() {
-      this.$nextTick(() => {
-        this.$refs.audio_.play();
-      });
+      this.audio = new Audio();
+      this.audio.src = this.mediasrc;
+      let playPromise;
+      playPromise = this.audio.play();
+      if (playPromise) {
+        playPromise
+          .then(() => {
+            // 音频加载成功
+            // 音频的播放需要耗时
+            that.tiemr = setInterval(() => {
+              second--;
+              if (second <= 0) {
+                that.audio.pause();
+                clearInterval(that.tiemr);
+              }
+            }, 1000);
+          })
+          .catch(e => {
+            // 音频加载失败
+            console.error(e);
+          });
+      }
     }
   }
 };
