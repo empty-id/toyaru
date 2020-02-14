@@ -8,6 +8,7 @@
       controls
     >你的浏览器版本太低，不支持audio标签</audio>-->
     <!-- http://imgs.shuxitech.com/audio/music_yyqx.mp3 -->
+    <m-audio :src="mediasrc" text="点击播放音乐效果更佳哦"></m-audio>
     <StyleEditor ref="styleEditor" :code="currentStyle"></StyleEditor>
     <ResumeEditor ref="resumeEditor" :markdown="currentMarkdown" :enableHtml="enableHtml"></ResumeEditor>
   </div>
@@ -284,9 +285,6 @@ html{
   created() {
     this.makeResume();
   },
-  mounted() {
-    this.handleCanplay();
-  },
   methods: {
     makeResume: async function() {
       await this.progressivelyShowStyle(0);
@@ -358,30 +356,6 @@ html{
         };
         showResume();
       });
-    },
-    handleCanplay() {
-      this.audio = new Audio();
-      this.audio.src = this.mediasrc;
-      let playPromise;
-      playPromise = this.audio.play();
-      if (playPromise) {
-        playPromise
-          .then(() => {
-            // 音频加载成功
-            // 音频的播放需要耗时
-            that.tiemr = setInterval(() => {
-              second--;
-              if (second <= 0) {
-                that.audio.pause();
-                clearInterval(that.tiemr);
-              }
-            }, 1000);
-          })
-          .catch(e => {
-            // 音频加载失败
-            console.error(e);
-          });
-      }
     }
   }
 };
