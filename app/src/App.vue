@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <m-audio :src="mediasrc" text="点击播放音乐"></m-audio>
+    <m-audio :src="mediasrc" text="点击播放音乐" :show-duration="false"></m-audio>
     <StyleEditor ref="styleEditor" :code="currentStyle"></StyleEditor>
     <ResumeEditor ref="resumeEditor" :markdown="currentMarkdown" :enableHtml="enableHtml"></ResumeEditor>
   </div>
