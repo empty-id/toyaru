@@ -8,7 +8,7 @@
       controls
     >你的浏览器版本太低，不支持audio标签</audio>-->
     <!-- http://imgs.shuxitech.com/audio/music_yyqx.mp3 -->
-    <m-audio :src="mediasrc" text="点击播放音乐效果更佳哦"></m-audio>
+    <m-audio :src="mediasrc" text="点击播放音乐"></m-audio>
     <StyleEditor ref="styleEditor" :code="currentStyle"></StyleEditor>
     <ResumeEditor ref="resumeEditor" :markdown="currentMarkdown" :enableHtml="enableHtml"></ResumeEditor>
   </div>
@@ -61,7 +61,8 @@ export default {
   },
   computed: {
     mediasrc() {
-      return require("./assets/music_yyqx.mp3");
+      // return require("./assets/music_yyqx.mp3");
+      return "http://imgs.shuxitech.com/audio/music_yyqx.mp3";
     }
   },
   data() {
