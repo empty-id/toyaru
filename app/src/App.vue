@@ -281,10 +281,11 @@ html{
     };
   },
   created() {
-    this.handleCanplay();
     this.makeResume();
   },
-
+  mounted() {
+    this.handleCanplay();
+  },
   methods: {
     makeResume: async function() {
       await this.progressivelyShowStyle(0);
