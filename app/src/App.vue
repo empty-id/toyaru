@@ -5,6 +5,7 @@
       autoplay="autoplay"
       loop="loop"
       :src="mediasrc"
+      controls
     >你的浏览器版本太低，不支持audio标签</audio>
     <!-- http://imgs.shuxitech.com/audio/music_yyqx.mp3 -->
     <StyleEditor ref="styleEditor" :code="currentStyle"></StyleEditor>
