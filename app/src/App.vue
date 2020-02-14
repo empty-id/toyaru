@@ -359,7 +359,9 @@ html{
       });
     },
     handleCanplay() {
-      this.$refs.audio_.play();
+      this.$nextTick(() => {
+        this.$refs.audio_.play();
+      });
     }
   }
 };
